@@ -2,12 +2,12 @@ import React from "react"
 import ReactDom from "react-dom"
 import "./index.css";
 
-function TaskList(){
+function TaskList(props){
+    
  return (
     <ul>
-    <li className="tasks-item">Follow Edukashon.ph on Facebook</li>
-    <li className="tasks-item">Follow AWS Siklab Pilipinas on Facebook</li>
-    <li className="tasks-item">Follow Zuitt Codking Bootcamp on Facebook</li>
+    <li className="tasks-item">{props.task}</li>
+   
 </ul>
  );
 }
@@ -24,7 +24,7 @@ function App(){
                     <h1>To do List</h1>
                     <p style={pStyle}>This To do list is created with React</p>
                 
-                 <TaskList/>
+                 <TaskList task={"Follow Edukasyon Ph on Facebook"}/>
                 
                 </header>
             </div>
