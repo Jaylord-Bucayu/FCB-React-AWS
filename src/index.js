@@ -4,11 +4,22 @@ import "./index.css";
 
 function App(){
 
+    const pStyle = {
+        "marginBottom": "15px"
+    }
+
     return (
             <div className="app">
                 <header className="app-header">
                     <h1>To do List</h1>
-                    <p>This To do list is created with React</p>
+                    <p style={pStyle}>This To do list is created with React</p>
+                
+                    <ul>
+        	            <li className="tasks-item">Follow Edukashon.ph on Facebook</li>
+        	            <li className="tasks-item">Follow AWS Siklab Pilipinas on Facebook</li>
+        	            <li className="tasks-item">Follow Zuitt Codking Bootcamp on Facebook</li>
+                    </ul>
+                
                 </header>
             </div>
     );

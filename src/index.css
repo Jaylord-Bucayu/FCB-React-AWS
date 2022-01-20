@@ -10,6 +10,7 @@
 }
 .app p {
   font-family: "Didact Gothic", sans-serif;
+  font-size: 14px;
 }
 .app-header {
   background-color: #282c34;
@@ -20,4 +21,16 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+ul {
+  list-style: none;
+  width: 50%;
+}
+
+.tasks-item {
+  border: 1px solid #d3d3d30f;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 5px;
 }
