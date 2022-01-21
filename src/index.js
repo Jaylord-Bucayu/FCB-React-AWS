@@ -5,15 +5,15 @@ import "./index.css";
 function TaskList(props){
     
  return (
-    <ul>
+   
     <li className="tasks-item">{props.task}</li>
    
-</ul>
+
  );
 }
 
 function App(){
-
+    const taskItems = ["Follow Edukasyon Ph on Facebook","Follow Aws Siklab on Facebook","Follow Zuitt on Facebook"]
     const pStyle = {
         "marginBottom": "15px"
     }
@@ -23,8 +23,15 @@ function App(){
                 <header className="app-header">
                     <h1>To do List</h1>
                     <p style={pStyle}>This To do list is created with React</p>
-                
-                 <TaskList task={"Follow Edukasyon Ph on Facebook"}/>
+
+                    <input className="task-input"/>
+                    <ul>
+                        {taskItems.map((task,index) => {
+                            return <TaskList key={index} task={task} />
+                            
+                        })}
+
+                    </ul>
                 
                 </header>
             </div>

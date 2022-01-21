@@ -1,0 +1,25 @@
+[1mdiff --git a/src/index.js b/src/index.js[m
+[1mindex b0cd7e4..6f87e9f 100644[m
+[1m--- a/src/index.js[m
+[1m+++ b/src/index.js[m
+[36m@@ -13,7 +13,7 @@[m [mfunction TaskList(props){[m
+ }[m
+ [m
+ function App(){[m
+[31m-[m
+[32m+[m[32m    const taskItems = ["Follow Edukasyon Ph on Facebook","Follow Aws Siklab on Facebook","Follow Zuitt on Facebook"][m
+     const pStyle = {[m
+         "marginBottom": "15px"[m
+     }[m
+[36m@@ -24,7 +24,10 @@[m [mfunction App(){[m
+                     <h1>To do List</h1>[m
+                     <p style={pStyle}>This To do list is created with React</p>[m
+                 [m
+[31m-                 <TaskList task={"Follow Edukasyon Ph on Facebook"}/>[m
+[32m+[m[32m                        {taskItems.map((task,index) => {[m
+[32m+[m[32m                            return <TaskList key={index} task={task} />[m
+[32m+[m[41m                            [m
+[32m+[m[32m                        })}[m
+                 [m
+                 </header>[m
+             </div>[m
